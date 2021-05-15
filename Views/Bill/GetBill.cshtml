@@ -1,0 +1,39 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Classes.Invoice
+@{
+    ViewBag.Title = "GetBill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Ürün Güncelleme Sayfası</h2>
+
+@using (Html.BeginForm("UpdateBill", "Bill", FormMethod.Post))
+{
+<div class="container" style="margin-left:10px;">
+    @Html.HiddenFor(x => x.InvoiceId)
+    <br />
+    @Html.Label("Seri No")
+    @Html.TextBoxFor(x => x.InvoiceSerialNo, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sıra No")
+    @Html.TextBoxFor(x => x.InvoiceOrderNo, new { @class = "form-control" })
+    <br />
+    @Html.Label("Vegi Dairesi")
+    @Html.TextBoxFor(x => x.TaxAdministration, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("Saat")
+    @Html.TextBoxFor(x => x.Time, new { @class = "form-control" })
+    <br />
+    @Html.Label("Teslim Eden")
+    @Html.TextBoxFor(x => x.Deliver, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Teslim Alan")
+    @Html.TextBoxFor(x => x.Receive, new { @class = "form-control" })
+    <button class="btn btn-sm" style="background-color:yellow; color:red;">Güncelle</button>
+
+</div>
+}
+

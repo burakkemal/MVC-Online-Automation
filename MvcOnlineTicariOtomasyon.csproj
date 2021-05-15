@@ -533,6 +533,9 @@
     <Content Include="Views\Product\ProductList.cshtml" />
     <Content Include="Views\Bill\Index.cshtml" />
     <Content Include="Views\Bill\AddBill.cshtml" />
+    <Content Include="Views\Bill\GetBill.cshtml" />
+    <Content Include="Views\Bill\BillDetail.cshtml" />
+    <Content Include="Views\Bill\NewPen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,31 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Classes.BillPen
+@{
+    ViewBag.Title = "NewPen";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Kalem Sayfası</h2>
+
+<div class="container" style="margin-left:10px;">
+    <form class="form-group" method="post">
+        <br />
+        @Html.Label("Açıklama")
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+        <br />
+        @Html.Label("Miktar")
+        @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" }) 
+        <br />
+        @Html.Label("Birim fiyat")
+        @Html.TextBoxFor(x => x.UnitPrice, new { @class = "form-control" })
+        <br />
+        @Html.Label("Tutar")
+        @Html.TextBoxFor(x => x.Amount, new { @class = "form-control" })
+        <br />
+        @Html.Label("Fatura Id")
+        @Html.TextBoxFor(x => x.BillId, new { @class = "form-control" })
+       
+
+        <button class="btn btn-sm" style="background-color:yellow; color:red;">Ürün Ekle</button>
+    </form>
+</div>
+
