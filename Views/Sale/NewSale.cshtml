@@ -1,0 +1,32 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Classes.SalesMovement
+@{
+    ViewBag.Title = "NewSale";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Satış</h2>
+<div class="container" style="margin-left:10px;">
+    <form class="form-group" method="post">
+        <br />
+        @Html.Label("Ürün")
+        @Html.DropDownListFor(x => x.ProductId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+        <br />
+        @Html.Label("Cari")
+        @Html.DropDownListFor(x => x.CurrentId, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+        <br />
+        @Html.Label("Personel")
+        @Html.DropDownListFor(x => x.StaffId, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
+        <br />       
+        @Html.Label("Adet")
+        @Html.TextBoxFor(x => x.Piece, new { @class = "form-control" })
+        <br />
+        @Html.Label("Satış Fiyatı")
+        @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+        <br />
+        @Html.Label("Toplam Tutar")
+        @Html.TextBoxFor(x => x.TotalAmount, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-sm" style="background-color:yellow; color:red;">Satış Yap </button>
+    </form>
+</div>
+

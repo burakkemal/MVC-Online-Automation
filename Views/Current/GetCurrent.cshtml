@@ -1,0 +1,30 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Classes.Current
+@{
+    ViewBag.Title = "GetCurrent";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br/>
+<h2>Cari GÜncelleme Ekranı</h2>
+@using (Html.BeginForm("UpdateCurrent", "Current",FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.CurrentId)
+    @Html.Label("Ad")
+    @Html.TextAreaFor(x => x.CurrentName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CurrentName, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Soyad")
+    @Html.TextAreaFor(x => x.CurrentLastName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CurrentLastName, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Şehir")
+    @Html.TextAreaFor(x => x.CurrentCity, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CurrentCity, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Mail")
+    @Html.TextAreaFor(x => x.CurrentMail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CurrentMail, "", new { @style = "color:red" })
+    <br />
+    <button class="btn btn-default" style="background-color:yellowgreen"> Güncelle</button>
+</div>
+}

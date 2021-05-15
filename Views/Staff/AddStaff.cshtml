@@ -1,0 +1,25 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Classes.Staff
+@{
+    ViewBag.Title = "AddStaff";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Yeni Personel Sayfası</h2>
+<div class="container" style="margin-left:10px;">
+    <form class="form-group" method="post">
+        <br />
+        @Html.Label("Personel Adı")
+        @Html.TextBoxFor(x => x.StaffName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Personel Soyad")
+        @Html.TextBoxFor(x => x.StaffLastName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Personel Görsel")
+        @Html.TextBoxFor(x => x.StaffImage, new { @class = "form-control" })
+        <br />
+        @Html.Label("Departman")
+        @Html.DropDownListFor(x=>x.DepartmentId,(List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control"})
+        <br />
+        <button class="btn btn-sm" style="background-color:yellow; color:red;">Ürün Ekle</button>
+    </form>
+</div>
+

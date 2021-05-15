@@ -1,0 +1,28 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Classes.Staff
+@{
+    ViewBag.Title = "GetStaff";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Personel GÜncelleme Ekranı</h2>
+@using (Html.BeginForm("UpdateStaff", "Staff", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.StaffId)
+    @Html.Label("Ad")
+    @Html.TextAreaFor(x => x.StaffName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Soyad")
+    @Html.TextAreaFor(x => x.StaffLastName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Görsel")
+    @Html.TextAreaFor(x => x.StaffImage, new { @class = "form-control" })
+    <br />
+    @Html.Label("Departman")
+    @Html.DropDownListFor(x => x.DepartmentId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" }))
+    <br />
+    <button class="btn btn-default" style="background-color:yellowgreen"> Güncelle</button>
+</div>
+}
+
