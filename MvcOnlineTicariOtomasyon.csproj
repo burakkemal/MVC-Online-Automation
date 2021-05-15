@@ -529,6 +529,7 @@
     <Content Include="Views\Sale\NewSale.cshtml" />
     <Content Include="Views\Sale\GetSale.cshtml" />
     <Content Include="Views\Sale\SaleDetail.cshtml" />
+    <Content Include="Views\Product\ProductList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -55,5 +55,10 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return RedirectToAction("Index");
 
         }
+        public ActionResult ProductList()
+        {
+            var result = context.Products.ToList();
+            return View(result);
+        }
     }
 }
