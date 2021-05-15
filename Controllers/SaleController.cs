@@ -89,5 +89,10 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult SaleDetail(int id)
+        {
+            var result = context.SalesMovements.Where(x => x.SaleId == id).ToList();
+            return View(result);
+        }
     }
 }
