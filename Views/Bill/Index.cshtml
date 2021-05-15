@@ -1,0 +1,46 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Classes
+@model List<Invoice>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top:20px; margin-left:20px;">
+    <tr>
+        <th>Id</th>
+        <th>Seri no</th>
+        <th>Sıra No</th>
+        <th>Veri Dairesi</th>
+        <th>Tarih</th>
+        <th>Saat</th>
+        <th>Teslim Eden</th>
+        <th>Teslim Alan</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+        <th>Toplam</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.InvoiceId</td>
+            <td>@x.InvoiceSerialNo</td>
+            <td>@x.InvoiceOrderNo</td>
+            <td>@x.Date</td>
+            <td>@x.Time</td>
+            <td>@x.Time</td>
+            <td>@x.Deliver</td>
+            <td>@x.Receive</td>
+            <td>@x.Total</td>
+
+            <td>
+                <a href="/Department/GetDepartment/@x.InvoiceId" class="btn btn-warning">Güncelle</a>
+            </td>
+            <td>
+                <a href="/Department/DepartmentDetail/@x.InvoiceId" class="btn btn-success">Detaylar</a>
+            </td>
+
+        </tr>
+    }
+</table>
+<a href="/Bill/AddBill" class="btn btn-primary">Fatura Ekle</a>
+
